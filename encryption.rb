@@ -19,6 +19,7 @@ puts
 puts "Каким способом зашифровать:"
 puts "1. MD5"
 puts "2. SHA1"
+puts "3. SHA2"
 encryption_id = STDIN.gets.to_i
 puts
 puts "Вот что получилось:"
@@ -27,6 +28,8 @@ if encryption_id == 1
   puts "#{Digest::MD5.hexdigest(phrase)}"
 elsif encryption_id == 2
   puts "#{Digest::SHA1.hexdigest(phrase)}"
+elsif encryption_id == 3
+  puts "#{Digest::SHA2.hexdigest(phrase)}"
 else
   puts "Вы ввели недопустимое значение"
 end
